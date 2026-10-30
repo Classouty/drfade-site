@@ -185,7 +185,6 @@ section[id] {
   background: #141412;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .card h3 {
@@ -197,6 +196,35 @@ section[id] {
 .card p {
   line-height: 1.6;
   margin-bottom: 25px;
+}
+
+/* Списки в карточках */
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+  text-align: left;
+}
+
+.card li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.card li::before {
+  content: "✂";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* Кнопка прижата к низу карточки */
+
+.card .button {
+  margin-top: auto;
 }
 
 /* Контакты */
@@ -216,6 +244,7 @@ section[id] {
 
 .contact-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   margin-top: 30px;
